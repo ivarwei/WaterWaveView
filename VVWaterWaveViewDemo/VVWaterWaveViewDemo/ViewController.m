@@ -9,9 +9,6 @@
 #import "ViewController.h"
 #import "VVWaterWaveView.h"
 
-
-#define VVColor(r,g,b,a) ([UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a])
-
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet VVWaterWaveView *waterWaveViewTop;
@@ -30,15 +27,15 @@
     self.waterWaveViewTop.percent = self.percentSlider.value;
     self.waterWaveViewTop.amplitude = self.amplitudeSlider.value;
     self.waterWaveViewTop.waveLayerColorArray = @[
-                                                  VVColor(131,169,235,0.5),
-                                                  VVColor(131,169,235,1.0),
+                                                  [UIColor colorWithRed:131/255.0 green:169/255.0 blue:235/255.0 alpha:0.5],
+                                                  [UIColor colorWithRed:131/255.0 green:169/255.0 blue:235/255.0 alpha:1.0]
                                                   ];
     self.waterWaveViewBottom.percent = self.percentSlider.value;
     self.waterWaveViewBottom.amplitude = self.amplitudeSlider.value;
     self.waterWaveViewBottom.waveLayerColorArray = @[
-                                                     VVColor(131,169,235,0.5),
-                                                     VVColor(131,169,235,0.7),
-                                                     VVColor(131,169,235,1.0),
+                                                     [UIColor colorWithRed:131/255.0 green:169/255.0 blue:235/255.0 alpha:0.5],
+                                                     [UIColor colorWithRed:131/255.0 green:169/255.0 blue:235/255.0 alpha:0.7],
+                                                     [UIColor colorWithRed:131/255.0 green:169/255.0 blue:235/255.0 alpha:1.0]
                                                      ];
     self.waterWaveViewBottom.layer.cornerRadius = self.waterWaveViewBottom.frame.size.width * 0.5;
     self.waterWaveViewBottom.clipsToBounds = YES;
